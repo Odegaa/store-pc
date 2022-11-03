@@ -23,7 +23,6 @@ public class Category {
     private String categoryName;
 
     @ManyToOne
-    @NotNull
     private Category parentCategory;
 
 }
