@@ -1,6 +1,7 @@
 package com.storepc.models;
 
 import com.storepc.models.address.Address;
+import com.storepc.templates.Role;
 import lombok.*;
 
 import javax.persistence.*;
@@ -62,6 +63,7 @@ public class Account {
 
     @NotNull
     @OneToMany
+    @ToString.Exclude
     private List<Card> cards;
 
 }
