@@ -24,32 +24,27 @@ public class Account {
     private Long id;
 
     @NotNull
-    @Column(name = "first_name")
     @Size(min = 3, message = "Minimum size firstname is - 3")
     private String firstName;
 
     @NotNull
-    @Column(name = "last_name")
     @Size(min = 3, message = "Minimum size lastname is - 3")
     private String lastName;
 
     @NotNull
-    @Column(unique = true, name = "username")
+    @Column(unique = true)
     @Size(min = 5, message = "Minimum size username is - 5")
     private String username;
 
     @NotNull
     @Email
-    @Column(name = "email")
     private String email;
 
     @NotNull
-    @Column(name = "phone_number")
     @Size(min = 9, message = "Minimum size phone is - 9")
     private String phone;
 
     @NotNull
-    @Column(name = "password")
     @Size(min = 8, message = "Min size password is - 8")
     private String password;
 
@@ -58,7 +53,6 @@ public class Account {
     private Address address;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "role")
     private Role role;
 
     @NotNull

@@ -19,19 +19,17 @@ public class Attachment {
     private Long id;
 
     @NotNull
-    @Column(unique = true, name = "original_name")
+    @Column(unique = true)
     private String originalName;
 
     @NotNull
-    @Column(name = "content_type")
     private String contentType;
 
     @NotNull
-    @Column(name = "size")
     private Long size;
 
     @NotNull
-    @Column(name = "generation_name", unique = true)
+    @Column(unique = true)
     private String generationName;
 
 }

@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AttachmentRepository extends JpaRepository<Attachment, Long> {
+
+    boolean existsByGenerationName(String generationName);
+
 }

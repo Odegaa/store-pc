@@ -19,7 +19,6 @@ public class AttachmentContent {
     private Long id;
 
     @NotNull
-    @Column(name = "bytes")
     private byte[] bytes;
 
     @NotNull

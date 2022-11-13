@@ -19,7 +19,7 @@ public class Country {
     private Long id;
 
     @NotNull
-    @Column(unique = true, name = "country_name")
+    @Column(unique = true)
     private String countryName;
 
 }

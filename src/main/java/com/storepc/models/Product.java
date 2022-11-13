@@ -21,15 +21,12 @@ public class Product {
     private Long id;
 
     @NotNull
-    @Column(name = "product_name")
     private String productName;
 
     @NotNull
-    @Column(name = "about")
     private String about;
 
     @NotNull
-    @Column(name = "price")
     private BigDecimal price;
 
     @NotNull

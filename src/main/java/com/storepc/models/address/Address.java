@@ -19,11 +19,9 @@ public class Address {
     private Long id;
 
     @NotNull
-    @Column(name = "street_name")
     private String streetName;
 
     @NotNull
-    @Column(name = "house_number")
     private Integer houseNumber;
 
     @NotNull

@@ -19,7 +19,7 @@ public class Category {
     private Long id;
 
     @NotNull
-    @Column(unique = true, name = "category_name")
+    @Column(unique = true)
     private String categoryName;
 
     @ManyToOne

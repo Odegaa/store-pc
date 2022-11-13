@@ -37,7 +37,9 @@ public class CountryServiceImpl implements CountryService {
         if (byCountryName) {
             return new Result("This country name already exist!", false, HttpStatus.CONFLICT);
         }
-        countryRepository.save(country);
+        Country newCountry = new Country();
+        newCountry.setCountryName(country.getCountryName());
+        countryRepository.save(newCountry);
         return new Result("Country saved!", true, HttpStatus.CREATED);
     }
 

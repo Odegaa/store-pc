@@ -20,11 +20,10 @@ public class Brand {
     private Long id;
 
     @NotNull
-    @Column(unique = true, name = "brand_name")
+    @Column(unique = true)
     private String brandName;
 
     @NotNull
-    @Column(name = "about")
     private String about;
 
     @OneToMany

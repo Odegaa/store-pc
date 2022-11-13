@@ -19,7 +19,7 @@ public class Region {
     private Long id;
 
     @NotNull
-    @Column(unique = true, name = "region_name")
+    @Column(unique = true)
     private String regionName;
 
     @NotNull

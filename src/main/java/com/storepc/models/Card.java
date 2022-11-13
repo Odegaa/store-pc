@@ -20,16 +20,14 @@ public class Card {
     private Long id;
 
     @NotNull
-    @Column(unique = true, name = "card_number")
+    @Column(unique = true)
     @Size(min = 16, max = 16, message = "card number size 16.")
     private String cardNumber;
 
     @NotNull
-    @Column(name = "card_user")
     private String cardUser;
 
     @NotNull
-    @Column(name = "cvc")
     private String cvc;
 
 }

@@ -19,11 +19,9 @@ public class Blog {
     private Long id;
 
     @NotNull
-    @Column(name = "title")
     private String title;
 
     @NotNull
-    @Column(name = "text")
     private String text;
 
     @NotNull

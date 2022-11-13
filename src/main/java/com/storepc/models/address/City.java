@@ -19,7 +19,7 @@ public class City {
     private Long id;
 
     @NotNull
-    @Column(unique = true, name = "city_name")
+    @Column(unique = true)
     private String cityName;
 
     @NotNull
