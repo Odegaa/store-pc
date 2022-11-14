@@ -18,5 +18,5 @@ public class AccountDto {
     private String phone;
     private String password;
     private Long addressId;
-    private List<Card> cardId;
+    private List<Long> cardId;
 }

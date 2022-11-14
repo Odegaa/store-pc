@@ -14,7 +14,7 @@ public interface AccountService {
 
     Result addAccount(AccountDto accountDto);
 
-    Result updateAccount(Long accountId, Account account);
+    Result updateAccount(Long accountId, AccountDto accountDto);
 
     Result deleteAccount(Long accountId);
 }
