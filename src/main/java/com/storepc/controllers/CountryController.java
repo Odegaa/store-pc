@@ -18,26 +18,26 @@ public class CountryController {
     private final CountryService service;
 
     @PostMapping
-    @PreAuthorize(value = "hasAnyRole('ADMIN', 'DIRECTOR')")
+    @PreAuthorize(value = "hasAuthority('create')")
     private ResponseEntity<Result> addCountry(@Valid @RequestBody Country country) {
         Result result = service.addCountry(country);
         return ResponseEntity.status(result.getStatus()).body(result);
     }
 
     @GetMapping
-    @PreAuthorize(value = "hasAnyRole('ADMIN', 'DIRECTOR','USER')")
+    @PreAuthorize(value = "hasAuthority('read')")
     private ResponseEntity<List<Country>> getAllCountries() {
         return ResponseEntity.ok(service.getAllCountry());
     }
 
     @GetMapping("/{countryId}")
-    @PreAuthorize(value = "hasRole('DIRECTOR')")
+    @PreAuthorize(value = "hasAuthority('read')")
     private ResponseEntity<Country> getCountry(@PathVariable Long countryId) {
         return ResponseEntity.ok(service.getCountry(countryId));
     }
 
     @PutMapping("/{countryId}")
-    @PreAuthorize(value = "hasRole('DIRECTOR')")
+    @PreAuthorize(value = "hasAuthority('write')")
     private ResponseEntity<Result> updateCountry(@PathVariable Long countryId,
                                                  @Valid @RequestBody Country country) {
         Result result = service.updateCountry(countryId, country);
@@ -45,6 +45,7 @@ public class CountryController {
     }
 
     @DeleteMapping("/{countryId}")
+    @PreAuthorize(value = "hasAuthority('write')")
     private ResponseEntity<Result> deleteCountry(@PathVariable Long countryId) {
         Result result = service.deleteCountry(countryId);
         return ResponseEntity.status(result.getStatus()).body(result);
