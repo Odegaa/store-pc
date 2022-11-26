@@ -4,7 +4,7 @@ public enum Permissions {
 
     READ("read"),
     CREATE("create"),
-    WRITE("write");
+    WRITE("writ");
 
     private final String permission;
 
